@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head section -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form - Code Alliance</title>
+    <link rel="stylesheet" href="survey-form-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Bellefair&family=Cedarville+Cursive&family=Grape+Nuts&family=Inknut+Antiqua&family=Nanum+Pen+Script&family=Nunito+Sans:opsz@6..12&family=Quicksand&family=Roboto+Mono:ital@1&family=Work+Sans&family=Young+Serif&display=swap" rel="stylesheet">
+</head>
+
+<!-- <header> ... <h1> is included in <body> so it falls over background img -->
+  <header class="header">
+        <h1 id="title">‧˚Code Alliance - <i>not-so-survey</i>Form˚‧</h1>
+        <!-- <br> -->
+        <h2>‧˚Thank you for agreeing to sell your soul to the devil and fill out this form.˚‧
+        <br>‧˚We promise good things will happen as a result...˚‧</h2>
+    </header>
+<!-- body section -->
+  <body>
+
+    <div id="bg-img">
+
+<!-- flexbox container - two boxes - one text (.box-1), one form (.box-2) -->
+      <div id="flex-container">
+
+<!-- box - 1 - about us, text -->
+        <div class="box-1">
+            <h3> about lorem ipsum</h3>
+              <div class="about-us-txt"><p>Lorem Ipsum is simply dummy text of the       printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br><br>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.<br><br>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</b></p>
+              </div>
+        </div>
+        
+<!-- box - 2 - survey form -->
+        <div class="box-2">
+          <body class="form-body">
+            <h3>...the form...</h3>
+            <h4>fill it out to the best of your ability...or try to anyway</h4>
+            <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+
+              <!-- name, email, password -->
+              <fieldset>
+                <label id="name-label" type="text" for="first-name">first name please <input id="name" name="first-name" type="text" placeholder="first name" required /></label>
+                <label id="name-label" type="text" for="last-name">last name pretty please<input id="last-name" name="last-name" type="text" placeholder="last name"required /></label>
+                <label id="email-label" type="text" for="email">electronic mail<input id="email" name="email" type="email" placeholder="email" required /></label>
+                <label for="new-password">setup secret complicated password<input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+              </fieldset>
+
+              <!-- radio buttons - account type -->
+              <fieldset>
+                <legend class="legend">account type (one or the other)</legend>
+                <label for="personal-account"><input id="personal-account" type="radio" value="personal-account" name="account-type" class="inline" />personal</label>
+                <label for="business-account"><input id="business-account" type="radio" value="personal-account" name="account-type" class="inline" />business</label>
+              </fieldset>
+
+              <!-- checkboxes - outfit -->
+              <fieldset>
+                <legend class="legend">what are your favorite <i>work from home</i> outfits?
+                </legend>
+
+                <label for="undies">
+                  <input id="undies" type="checkbox" name="un" class="inline" value="undies" />tighty wighties
+                </label>
+
+                <label for="bday-suit">
+                  <input id="bday-suit" type="checkbox" name="bd" class="inline" value="bday-suit" />nothing at all
+                </label>
+
+                <label for="bow-tie">
+                  <input id="bow-tie" type="checkbox" name="bt" class="inline" value="bowtie" />bowtie, hat 'n cowboy boots
+                </label>
+
+                <label for="dress-shirt">
+                  <input id="dress-shirt" type="checkbox" name="ds" class="inline" value="dress-shirt" />shirt, tie, nothin' else
+                </label>
+
+                <label for="bunny">
+                  <input id="bunny" type="checkbox"  name="bun" class="inline" value="bunny" />giant pink bunny costume
+                </label>
+              </fieldset>
+
+              <fieldset>
+                <label for="profile-picture">we need a shot of you<input id="profile-picture" type="file" name="file" /></label>
+                <label id="number-label" type="text" for="age">your age in dog years is<input id="number" type="number" value="number" placeholder="your age" ="age" min="13" max="666" /></label>
+                <label for="referrer">who sent you?
+                  <select id="dropdown" name="referrer">
+                    <option value="">(select one)</option>
+                    <option value="1">Madonna</option>
+                    <option value="2">Jesus</option>
+                    <option value="3">Trump</option>
+                    <option value="4">Grim Reaper</option>
+                    <option value="5">a sick puppy</option>
+                    <option value="6">Charles Manson</option>
+                    <option value="7">I Forget...</option>
+                  </select>
+                </label>
+                <label for="textarea">tell us something sexy about you<textarea id="textarea" name="textarea" rows="3" cols="30" placeholder="I like coding in the nude..."></textarea>
+                </label>
+              </fieldset>
+              <label for="terms-and-conditions">
+                <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" value="submit" /><h4>check the box above to accept the<br> <a href="https://absolutelyridiculous.com/collections/ice-creamery" target="_blank">terms and conditions</h4></a>
+              </label>
+              <input id="submit" type="submit" value="Submit" />
+            </form>
+          </body>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

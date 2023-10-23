@@ -1,0 +1,234 @@
+/* Survey Form Stylesheet - "survey-form-styles.css" */
+
+/*  font-family: 'Bad Script', cursive;
+    font-family: 'Bellefair', serif;
+    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Grape Nuts', cursive;
+    font-family: 'Inknut Antiqua', serif;
+    font-family: 'Nanum Pen Script', cursive;
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Work Sans', sans-serif;
+    font-family: 'Young Serif', serif; 
+*/
+.header {
+    /* position: fixed; */
+    padding: 0.5%;
+    background-color: #0a0a23;
+    border: 2px solid #00000075;
+    box-shadow: 10px 10px 10px #00000075
+}
+
+#title {
+    font-variant:small-caps;
+    text-align:center;
+    font-size: 3rem;
+    font-family: candara;
+    z-index:3;
+    padding: -5%;
+    color:rgb(216, 223, 226);
+}
+
+h2 {
+    text-align:center;
+    font-size: 1.25rem;
+    font-family: candara;
+    color: rgb(216, 223, 226);
+    z-index:4;
+}
+
+h3 {
+    text-align:center;
+    font-size: 2rem;
+    font-family: candara;
+    color: #000;
+    z-index:4;
+}
+
+ h4 {
+    text-align:center;
+    font-size: 1.6rem;
+    font-family: candara;
+    color: rgb(9, 9, 9);
+    z-index:4;
+    font-weight: bold;
+}
+
+.about-us-txt {
+    color: #000;
+    font-size: 1.4rem;
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 0 7% 4% 7%;
+    text-align: justify;
+    font-weight: bold;
+}
+        /* scroll bar - right - formatting options?  */
+
+/* background image styles */
+#bg-img {
+    background-image: url("/white-mesh-bg-rpt.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: repeat;
+    opacity: 0.6;
+
+}
+/* ::before to limit "opacity" only to image... how?  */
+
+/* .bg-image::before {
+    content: "";
+    background-image: url("/white-mesh-bg-rpt.jpg");
+    background-size: cover;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+} */
+
+/* flexbox container */
+#flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    /* gap: 3%; */
+}
+
+/* flex box one */
+.box-1 {
+    width: 35%;
+    /* max-height: 10%; */
+    /* height: 200px; */
+    justify-content: flex-start;
+    /* align-items: stretch; */
+    background-color: rgba(42, 42, 42, 0.5);
+}
+
+/* flex box two */
+.box-2 {
+    width: 65%;
+    justify-content: flex-start;
+    background-color: rgba(42, 42, 42, 0.4);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(107, 38, 38, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.form-body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #1b1b32;
+    color: #f5f6f7;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.5rem;
+}
+  
+#survey-form {
+    width: 60vw;
+    max-width: 60%;
+    min-width: 40%;
+    margin: 0 auto;
+    padding: 0em;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    border-bottom: 0 solid #3b3b4f;
+}
+  
+fieldset:last-of-type {
+    border-bottom: 2%;
+}
+  
+label {
+    display: block;
+    margin-top: 2.1rem;
+    margin: 0.7rem 0;
+    color:yellow;
+    font-family: 'Young Serif', serif; 
+}
+
+input {
+    margin: 10px 0 10px 0;
+    width: 100%;
+    min-height: 2em;
+    font-family: 'Grape Nuts', cursive;
+    text-indent: 5px;
+    font-size: 2rem;
+    background-color: #0a0a23;
+    border: 2px dotted #0a0a23;
+    color: #ffffff;
+
+}
+
+textarea {
+    margin: 10px 0 10px 0;
+    width: 100%;
+    min-height: 2em;
+    font-family: 'Bad Script', cursive;
+    font-size: 2rem;
+    background-color: #0a0a23;
+    border: 2px dotted #0a0a23;
+    color: #ffffff;
+
+}
+select {
+    margin: 10px 0 10px 0;
+    width: 100%;
+    min-height: 2em;
+    font-family: 'Grape Nuts', cursive;
+    font-size: 2rem;
+}
+  
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+  
+input[type="submit"] {
+    display: block;
+    width: 80%;
+    margin: 1em auto;
+    height: 1.5em;
+    font-family: 'Bellefair', serif;
+    font-size: 2rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: 300px;
+}
+
+input:hover[type="submit"] {
+    display: block;
+    width: 80%;
+    margin: 1em auto;
+    height: 1.5em;
+    font-family: 'Bellefair', serif;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: yellow;
+    border:5px solid rgb(244, 150, 9);
+    min-width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+input[type="file"] {
+    padding: 1px 2px;
+}
+
+/* input[type="text, email, password, personal-account"] {
+    padding: 2px;
+    font-size: 1.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Arial, sans-serif;
+    color:rgb(216, 223, 226)
+
+}    */
+
+.legend {
+    margin-top:40%;
+    text-align: center;
+    color:rgb(19, 153, 198);
+    font-family: 'Quicksand', sans-serif;
+}
